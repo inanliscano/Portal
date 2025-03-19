@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Records</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/rec.css') }}">
-    <script src="{{ url_for('static', filename='js/rec.js')}}"></script>
+    <link rel="stylesheet" type="text/css" href="rec.css">
+    <script src="rec.js"></script>
 </head>
 <body>
 
    
     <nav class="navbar">
         <div class="logo-container">
-            <img src="{{ url_for('static', filename='images/3.png')}}" alt="School Logo">
+            <img src="3.png" alt="School Logo">
             <h1>STREAM Portal</h1>
         </div>
         <ul class="nav-links">
-            <li><a href="{{ url_for('index')}}">Home</a></li>
-            <li><a href="{{ url_for('transactions')}}">Transactions</a></li>
-            <li><a href="{{ url_for('records')}}" class="active">Records</a></li>
-            <li><a href="{{ url_for('enrollment')}}">Enrollment</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="transactions.html">Transactions</a></li>
+            <li><a href="records.html" class="active">Records</a></li>
+            <li><a href="enrollment.html">Enrollment</a></li>
         </ul>
     </nav>
 
