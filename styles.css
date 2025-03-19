@@ -1,0 +1,88 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: white;
+    color: #333;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: darkblue;
+    color: white;
+    padding: 15px 30px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+
+}
+
+.logo-container img {
+    height:80px;
+    width:auto; 
+ }
+
+.school-logo {
+    width: 50px;
+    height:auto;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: yellow;
+}
+
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-image: url("../images/4.jpg");
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+
+.section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#transactions { background: #f4f4f4; }
+#records { background: #ddd; }
+#enrollment { background: #bbb; }
+
+
+footer {
+    text-align: center;
+    background: darkblue;
+    color: white;
+    padding: 10px;
+}

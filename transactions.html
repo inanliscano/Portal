@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Transactions - STREAM Portal</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/tss.css')}}">
+    <script src="{{ url_for('static', filename='js/tss.js')}}"></script>
+</head>
+<body>
+
+    
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/3.png')}}" alt="School Logo">
+            <h1>STREAM Portal</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('index')}}">Home</a></li>
+                <li><a href="{{ url_for('transactions')}}" class="active">Transactions</a></li>
+                <li><a href="{{ url_for('records')}}">Records</a></li>
+                <li><a href="{{ url_for('enrollment')}}">Enrollment</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    
+    <section class="page-title">
+        <h2>Student Transactions</h2>
+        <p>Submit your transaction requests below.</p>
+    </section>
+
+   
+    <section class="transaction-form">
+        <form id="transactionForm">
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" name="studentName" required>
+
+            <label for="studentID">Student ID:</label>
+            <input type="text" id="studentID" name="studentID" required>
+
+            <label for="transactionType">Transaction Type:</label>
+            <select id="transactionType" name="transactionType" required>
+                <option value="">Select Transaction</option>
+                <option value="payments">Payments</option>
+                <option value="documents">Document Request</option>
+                <option value="grades">Grade Inquiry</option>
+                <option value="others">Others</option>
+            </select>
+
+            <label for="message">Additional Details:</label>
+            <textarea id="message" name="message" placeholder="Enter details here..."></textarea>
+
+            <button type="submit">Submit Request</button>
+        </form>
+    </section>
+
+    <footer>
+        <p></p>
+    </footer>
+
+    <script src="tss.js"></script>
+</body>
+</html>

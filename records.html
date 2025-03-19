@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Records</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/rec.css') }}">
+    <script src="{{ url_for('static', filename='js/rec.js')}}"></script>
+</head>
+<body>
+
+   
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/3.png')}}" alt="School Logo">
+            <h1>STREAM Portal</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('index')}}">Home</a></li>
+            <li><a href="{{ url_for('transactions')}}">Transactions</a></li>
+            <li><a href="{{ url_for('records')}}" class="active">Records</a></li>
+            <li><a href="{{ url_for('enrollment')}}">Enrollment</a></li>
+        </ul>
+    </nav>
+
+   
+    <div class="page-title">
+        <h2>Student Records Management</h2>
+    </div>
+
+   
+    <div class="records-section">
+
+        
+        <div class="search-container">
+            <input type="text" placeholder="Search student...">
+            <button>Search</button>
+        </div>
+
+       
+        <table class="records-table">
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Full Name</th>
+                    <th>Grade Level</th>
+                    <th>Enrollment Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2023001</td>
+                    <td>Juan Dela Cruz</td>
+                    <td>Grade 11</td>
+                    <td>Enrolled</td>
+                    <td class="action-buttons">
+                        <button class="view-btn">View</button>
+                        <button class="edit-btn">Edit</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2023002</td>
+                    <td>Carmelita Dolores</td>
+                    <td>Grade 12</td>
+                    <td>Pending</td>
+                    <td class="action-buttons">
+                        <button class="view-btn">View</button>
+                        <button class="edit-btn">Edit</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    
+    <footer>
+        <p></p>
+    </footer>
+
+</body>
+</html>
