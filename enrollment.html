@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enrollment Form - STREAM Portal</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/emt.css') }}">
-    <script src="{{ url_for('static', filename='js/emt.js')}}"></script>
+    <link rel="stylesheet" href="emt.css">
+    <script src="emt.js"></script>
 </head>
 <body>
 
@@ -16,8 +16,8 @@
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="{{ url_for('index')}}">Home</a></li>
-                <li><a href="{{ url_for('transactions')}}">Transactions</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="transactions.html">Transactions</a></li>
                 <li><a href="{{ url_for('records')}}">Records</a></li>
                 <li><a href="{{ url_for('enrollment')}}" class="active">Enrollment</a></li>
             </ul>
