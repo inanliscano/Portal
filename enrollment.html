@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrollment Form - STREAM Portal</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/emt.css') }}">
+    <script src="{{ url_for('static', filename='js/emt.js')}}"></script>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/3.png')}}" alt="School Logo">
+            <h1>STREAM Portal</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('index')}}">Home</a></li>
+                <li><a href="{{ url_for('transactions')}}">Transactions</a></li>
+                <li><a href="{{ url_for('records')}}">Records</a></li>
+                <li><a href="{{ url_for('enrollment')}}" class="active">Enrollment</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-title">
+        <h2>Student Enrollment Form</h2>
+        <p>Please fill out the required details to complete your enrollment.</p>
+    </section>
+
+    <section class="enrollment-form">
+    
+        <form id="enrollmentForm" action="" method="POST" enctype="multipart/form-data">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="studentID">Student ID:</label>
+            <input type="text" id="studentID" name="studentID" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="gradeLevel">Grade Level:</label>
+            <select id="gradeLevel" name="gradeLevel" required>
+                <option value="">Select Grade Level</option>
+                <option value="Grade 11">Grade 11</option>
+                <option value="Grade 12">Grade 12</option>
+                <option value="College">College</option>
+            </select>
+
+            <label for="course">Course/Strand (if applicable):</label>
+            <input type="text" id="course" name="course" placeholder="Leave blank if not applicable">
+
+            <label for="guardianName">Guardian's Name:</label>
+            <input type="text" id="guardianName" name="guardianName" required>
+
+            <label for="guardianContact">Guardian's Contact Number:</label>
+            <input type="tel" id="guardianContact" name="guardianContact" required>
+
+            <label for="address">Home Address:</label>
+            <textarea id="address" name="address" rows="2" required></textarea>
+
+            <label for="documents">Upload Your PSA and Report Card (Max: 5MB, PDF/JPG/PNG):</label>
+            <input type="file" id="documents" name="documents" accept=".pdf, .jpg, .png" required>
+            <input type="file" id="documents" name="documents" accept=".pdf, .jpg, .png" required>
+
+            
+            <button type="submit">Submit Enrollment</button>
+        </form>
+    </section>
+
+    <footer>
+        <p></p>
+    </footer>
+
+</body>
+</html>
